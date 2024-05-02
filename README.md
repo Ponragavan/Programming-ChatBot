@@ -6,8 +6,26 @@
 
 ## Live Demo
 
-  [Click Here]('https://programming-chatbot.netlify.app/')
+  [Click Here]("https://programming-chatbot.netlify.app/")
 
-## To run
+## Installation
 
-  
+To run this project locally, run the follwing code on your command prompt:
+
+1.Clone the repository:
+
+```bash
+git clone https://github.com/Ponragavan/Programming-ChatBot.git
+```
+
+2.Install dependencies:
+
+```bash
+npm install
+```
+
+3.To run:
+
+```bash
+npm run dev
+```
