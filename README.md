@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-  [Click Here]("https://programming-chatbot.netlify.app/")
+  [Click Here](https://programming-chatbot.netlify.app/)
 
 ## Installation
 
