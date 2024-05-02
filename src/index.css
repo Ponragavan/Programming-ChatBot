@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url('./assets/bg-wave.jpg');
+}
+
+.scrollbar-hide::-webkit-scrollbar{
+    display: none;
+}
+
+input[type="email"]:focus ~ .input-text{
+    @apply text-blue-500 bg-white transform -translate-y-7 -translate-x-3 scale-90;
+
+}
