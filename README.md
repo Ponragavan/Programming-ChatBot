@@ -1,8 +1,13 @@
-# React + Vite
+# Programming - ChatBOT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About 
 
-Currently, two official plugins are available:
+  This is the react-vite project:  Through the exception of Java, this straightforward chatbot can answer any question about programming. You must verify your email address with an OTP for each Java question you ask in order to receive an answer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
+
+  [Click Here]('https://programming-chatbot.netlify.app/')
+
+## To run
+
+  
