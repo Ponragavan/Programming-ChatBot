@@ -22,7 +22,7 @@ const App = () => {
     setIsJavaQues(false);
     const url =
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
-    const apiKey = "AIzaSyCTAz26VBoS6wk0jg4VcrpXkbpWtiTkxmo";
+    const apiKey = "YOUR_GEMINI_BARD_API_KEY";
 
     const requestBody = {
       contents: [
@@ -385,7 +385,7 @@ const App = () => {
     try {
       const url =
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
-      const apiKey = "AIzaSyCTAz26VBoS6wk0jg4VcrpXkbpWtiTkxmo";
+      const apiKey = "YOUR_GEMINI_BARD_API_KEY";
 
       const requestBody = {
         contents: [
