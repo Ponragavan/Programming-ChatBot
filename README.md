@@ -4,6 +4,10 @@
 
   This is the react-vite project:  Through the exception of Java, this straightforward chatbot can answer any question about programming. You must verify your email address with an OTP for each Java question you ask in order to receive an answer.
 
+## Add your API key
+
+   In App.jsx file add your API key.To get api key ( GEMINI GOOGLE BARD ) - https://ai.google.dev/
+
 ## Live Demo
 
   [Click Here](https://programming-chatbot.netlify.app/)
