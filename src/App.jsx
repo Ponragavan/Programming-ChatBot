@@ -22,7 +22,7 @@ const App = () => {
     setIsJavaQues(false);
     const url =
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
-    const apiKey = "YOUR_GEMINI_BARD_API_KEY";
+    const apiKey = import.meta.env.VITE_API_KEY;
 
     const requestBody = {
       contents: [
@@ -385,7 +385,7 @@ const App = () => {
     try {
       const url =
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
-      const apiKey = "YOUR_GEMINI_BARD_API_KEY";
+      const apiKey = import.meta.env.VITE_API_KEY;
 
       const requestBody = {
         contents: [
@@ -490,13 +490,13 @@ const App = () => {
   return (
     <>
       {!isSubmitted ? (
-        <div className="h-screen flex flex-col items-center">
-          <header className="flex flex-col items-center mt-5 mb-10 mx-3">
+        <div className="flex flex-col items-center h-screen">
+          <header className="flex flex-col items-center mx-3 mt-5 mb-10">
             <img src={logo} alt="Main logo" className="w-20 mb-3" />
-            <h1 className="uppercase text-3xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3">
+            <h1 className="mb-3 text-3xl font-bold text-transparent uppercase bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text">
               ChatBOT
             </h1>
-            <p className="text-lg text-wrap text-center text-red-500">
+            <p className="text-lg text-center text-red-500 text-wrap">
               Introducing a programming Q&A chatbot that answers all programming
               questions.(except 'java')
             </p>
