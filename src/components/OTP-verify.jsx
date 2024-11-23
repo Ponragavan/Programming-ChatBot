@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import axios from "axios";
 
 const OtpValidation = (props) => {
-  const [email, setEmail] = useState('');
-  // const [phoneNumber, setPhoneNumber] = useState();
+  const [email, setEmail] = useState("");
   const [otpPage, setOtpPage] = useState(false);
   const [generatedOtp, setGeneratedOtp] = useState("");
   const [receivedOtp, setReceivedOtp] = useState("");
@@ -11,28 +11,19 @@ const OtpValidation = (props) => {
   const OTPgeneration = () => {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     setGeneratedOtp(otp);
-    // const config = {
-    //   Username: "mponragavan@gmail.com",
-    //   Password: "E2798A8261661D4E1B8321CCCB34C9B81E84",
-    //   Server: "smtp.elasticemail.com",
-    //   Port: 2525,
-    //   // SecureToken: "46da29ec-c16e-46f7-ab77-fd97ec5ba3ea",
-    //   To: email,
-    //   From: "mponragavan@gmail.com",
-    //   Subject:
-    //     "This email is from ChatBot for your java question verification.",
-    //   Body: `And your OTP is ${otp}`,
-    // };
-    // Email.send(config)
-    //   .then((message) => {
-    //     alert(`OTP has been sent to your email.${email}`);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error sending OTP:", error);
-    //   });
-      alert(`OTP has been sent to your email. ${otp}`);
-      setOtpPage(true);
-    };
+    console.log(`${import.meta.env.VITE_BACKEND_URL}/api/mail`);
+    
+    // Send OTP to the email
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_URL}/api/mail`, { otp: otp, mail: email })
+      .then((res) => {
+        alert("OTP sent successfully");
+        setOtpPage(true);
+      })
+      .catch((err) => {
+        alert("Failed to send OTP");
+      });
+  };
 
   const verifyOtp = (otp) => {
     if (otp === receivedOtp) {
