@@ -86,7 +86,7 @@ Follow these steps to generate an API key for using Google Cloud services:
 #### Step 5: Add the API Key to Your Project
 
 1. Open the `.env` file in the **root folder** of your project.
-2. Add the API key as shown below:
+2. Add the API key to `VITE_API_KEY`.
 
 Once the `.env` files are configured, restart your development servers to apply the changes.
 
