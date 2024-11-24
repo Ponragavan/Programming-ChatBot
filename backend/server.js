@@ -18,9 +18,9 @@ const transporter = nodemailer.createTransport({
 app.post("/api/mail", (req, res) => {
   const { otp, mail } = req.body;
   const mailOptions = {
-    from: "Programming Chatbot", // Sender's email
+    from: `"Programming Chatbot" ${process.env.EMAIL}`, // Sender's email
     to: mail, // Recipient's email
-    subject: "Programming Chatbot - OTP Verification", // Clear subject
+    subject: "OTP Verification for Java Question", // Clear subject
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
         <h2 style="color: #4CAF50;">Hello,</h2>
