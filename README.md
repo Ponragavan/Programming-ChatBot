@@ -8,8 +8,6 @@ This is the react-vite project: Through the exception of Java, this straightforw
 
 [Click Here](https://programming-chatbot.netlify.app/)
 
-
-
 ## Add `.env` Files and API Information
 
 To set up the project for email verification and Java-related queries, you need to add environment variables in specific `.env` files for both the frontend and backend. Follow the steps below:
@@ -18,11 +16,11 @@ To set up the project for email verification and Java-related queries, you need 
 
 Create a `.env` file in the **backend folder** with the following variables:
 
-    ```bash
-    FRONTEND_URL=<your_frontend_url>
-    EMAIL=<your_email>
-    PASSWORD=<your_email_app_password>
-    ```
+```bash
+FRONTEND_URL=<your_frontend_url>
+EMAIL=<your_email>
+PASSWORD=<your_email_app_password>
+```
 
 - `FRONTEND_URL`: The URL of your deployed frontend application (e.g., `http://localhost:5173`).
 - `EMAIL`: The sender's email address used for sending OTPs. Use a valid email account.
@@ -34,10 +32,10 @@ Create a `.env` file in the **backend folder** with the following variables:
 
 Create a `.env` file in the **root folder** with the following variables:
 
-    ```bash
-    VITE_API_KEY=<your_api_key>
-    VITE_BACKEND_URL=<your_backend_url>
-    ```
+```bash
+VITE_API_KEY=<your_api_key>
+VITE_BACKEND_URL=<your_backend_url>
+```
 
 - `VITE_API_KEY`: Your API key, if any, for external services or APIs used in the project.
 - `VITE_BACKEND_URL`: The URL of your deployed backend application (e.g., `http://localhost:5000`).
