@@ -4,15 +4,21 @@
 
 This is the react-vite project: Through the exception of Java, this straightforward chatbot can answer any question about programming. You must verify your email address with an OTP for each Java question you ask in order to receive an answer.
 
+## Live Demo
+
+[Click Here](https://programming-chatbot.netlify.app/)
+
+
+
 ## Add `.env` Files and API Information
 
 To set up the project for email verification and Java-related queries, you need to add environment variables in specific `.env` files for both the frontend and backend. Follow the steps below:
 
 ### Backend `.env` File
 
-    Create a `.env` file in the **backend folder** with the following variables:
+Create a `.env` file in the **backend folder** with the following variables:
 
-    ```env
+    ```bash
     FRONTEND_URL=<your_frontend_url>
     EMAIL=<your_email>
     PASSWORD=<your_email_app_password>
@@ -28,7 +34,7 @@ To set up the project for email verification and Java-related queries, you need 
 
 Create a `.env` file in the **root folder** with the following variables:
 
-    ```env
+    ```bash
     VITE_API_KEY=<your_api_key>
     VITE_BACKEND_URL=<your_backend_url>
     ```
@@ -89,10 +95,6 @@ Follow these steps to generate an API key for using Google Cloud services:
 2. Add the API key to `VITE_API_KEY`.
 
 Once the `.env` files are configured, restart your development servers to apply the changes.
-
-## Live Demo
-
-[Click Here](https://programming-chatbot.netlify.app/)
 
 ## Installation
 
