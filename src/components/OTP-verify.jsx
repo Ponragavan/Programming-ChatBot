@@ -1,27 +1,30 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import axios from "axios";
+import Spinner from "./Spinner";
 
 const OtpValidation = (props) => {
   const [email, setEmail] = useState("");
   const [otpPage, setOtpPage] = useState(false);
   const [generatedOtp, setGeneratedOtp] = useState("");
   const [receivedOtp, setReceivedOtp] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const OTPgeneration = () => {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     setGeneratedOtp(otp);
-    console.log(`${import.meta.env.VITE_BACKEND_URL}/api/mail`);
-    
+    setLoading(true);    
     // Send OTP to the email
     axios
       .post(`${import.meta.env.VITE_BACKEND_URL}/api/mail`, { otp: otp, mail: email })
       .then((res) => {
         alert("OTP sent successfully");
+        setLoading(false);
         setOtpPage(true);
       })
       .catch((err) => {
         alert("Failed to send OTP");
+        setLoading(false);
       });
   };
 
@@ -47,11 +50,11 @@ const OtpValidation = (props) => {
               className="left-0 h-12 pl-5 pr-28 max-[450px]:pr-24 text-lg outline-none bg-white w-full border border-slate-500 rounded-lg focus:border-blue-500 transition duration-200"
             />
             <Button
-              disabled={!email}
+              disabled={!email || loading}
               onClick={() => OTPgeneration()}
-              className="absolute right-0 z-10 h-12 disabled:bg-slate-500"
+              className="absolute top-0 right-0 min-w-20 z-10 h-12 disabled:bg-slate-500"
             >
-              Send
+              {loading ? <Spinner /> : 'Send'}
             </Button>
           </>
         ) : (
@@ -66,7 +69,7 @@ const OtpValidation = (props) => {
             <Button
               disabled={!receivedOtp}
               onClick={() => verifyOtp(generatedOtp)}
-              className="absolute right-0 z-10 h-12 disabled:bg-slate-500"
+              className="absolute top-0 right-0 z-10 h-12 disabled:bg-slate-500"
             >
               Verify OTP
             </Button>
